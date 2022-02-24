@@ -99,6 +99,7 @@ video {
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -108,10 +109,9 @@ body {
 h1 {
     font-family: 'Bungee Outline', cursive;
     color: var(--accent-color);
-    font-size: 20vw;
-    line-height: .8;
-    -webkit-text-stroke: 0.6vw var(--accent-color);
     opacity: .6;
+    font-size: 20em;
+    -webkit-text-stroke-width: 10px;
 }
 
 h2 {
@@ -200,21 +200,30 @@ nav {
 .splash {
     height: 100vh;
     padding: 0;
+    display: flex;
+    align-items: center;
 }
 
 .splashWrapper {
-    padding: 250px 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.splash h1 {
+    font-size: 20.5vw;
+    line-height: .8;
+    -webkit-text-stroke: 0.6vw var(--accent-color);
 }
 
 .splash h1:nth-child(2) {
-    font-size: 29vw;
+    font-size: 29.5vw;
     -webkit-text-stroke-width: 0.8vw
 }
 
 .splashWrapper h2 {
     position: absolute;
-    bottom: 200px;
-    right: 100px;
+    bottom: 30px;
+    right: 30px;
 }
 
 a:visited,
@@ -232,7 +241,7 @@ a:focus {
 .projectAllLinksWrapper {
     display: flex;
     width: 100%;
-    margin: 200px 0;
+    margin: 100px 0;
 }
 
 .projectLinkWrapper {
@@ -279,18 +288,13 @@ a:focus {
 .projectLinkSection h2 {
     margin: 200px 0;
     position: relative;
-    margin-top: 100px;
 }
 
-.projectLinkSection h2::before {
-    content: 'WORK';
+.projectLinkSection h1 {
     position: absolute;
-    font-size: 6em;
+    font-size: 25em;
     -webkit-text-stroke-width: 10px;
-    font-family: 'Bungee Outline', cursive;
-    color: var(--accent-color);
-    opacity: .6;
-    top: 200px;
+    top: calc(50% - 110px);
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -343,14 +347,8 @@ a:focus {
 }
 
 .bttn:hover {
-    color: var(--background-color);
-    background: var(--text-color);
+    background: var(--accent-color);
     border-radius: 0;
-}
-
-.projectSection h1 {
-    font-size: 20em;
-    -webkit-text-stroke-width: 10px;
 }
 
 .squircle {
@@ -367,11 +365,8 @@ a:focus {
 .squircle:hover,
 .squircleActive {
     transform: rotate(360deg);
-    border-width: 0;
     border-radius: 0;
-    background: var(--text-color);
-    width: 28px;
-    height: 28px;
+    border-color: var(--accent-color);
 }
 
 .projectNav {
@@ -385,6 +380,11 @@ a:focus {
     text-decoration: none;
     font-size: 30px;
     display: block;
+    transition: .5s;
+}
+
+.arrowHead:hover {
+    color: var(--accent-color);
 }
 
 footer {
