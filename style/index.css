@@ -142,16 +142,6 @@ section,
     position: relative;
 }
 
-body,
-html {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background: black;
-}
-
 .cirContainer {
     animation: out 2.5s;
     opacity: 0;
@@ -782,5 +772,8 @@ footer i:hover {
     }
     .bttn {
         padding: 10px 20px;
+    }
+    .title {
+        margin-top: 30%;
     }
 }
