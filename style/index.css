@@ -565,8 +565,7 @@ a:focus {
 }
 
 .title {
-    width: 40%;
-    height: 400px;
+    width: 50%;
 }
 
 .title p,
@@ -593,6 +592,7 @@ a:focus {
     width: 50%;
     height: 40%;
     z-index: -1;
+    box-shadow: 5px 5px 22px 11px rgb(0 0 0 / 51%);
 }
 
 .bg1 {
@@ -772,8 +772,5 @@ footer i:hover {
     }
     .bttn {
         padding: 10px 20px;
-    }
-    .title {
-        margin-top: 30%;
     }
 }
