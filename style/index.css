@@ -142,6 +142,241 @@ section,
     position: relative;
 }
 
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: black;
+}
+
+.cirContainer {
+    animation: out 2.5s;
+    opacity: 0;
+}
+
+@keyframes out {
+    24.9% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    92% {
+        opacity: 1;
+    }
+}
+
+.cir {
+    stroke-dasharray: 269.7405090332031px;
+    stroke-dashoffset: 0;
+    animation: cirDraw 1s reverse;
+    transform: rotate(-90deg);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: calc(50% + 20px);
+    left: calc(50% + 20px);
+    animation-delay: .5s !important;
+}
+
+@keyframes cirDraw {
+    100% {
+        stroke-dashoffset: 269.7405090332031px;
+    }
+}
+
+.square {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+}
+
+.segment {
+    height: 70px;
+    width: 4px;
+    background: white;
+    position: absolute;
+    animation-delay: .5s !important;
+    opacity: 0;
+}
+
+.hor {
+    height: 4px;
+    width: 70px;
+}
+
+.segment:nth-child(1) {
+    animation: seg1 2s;
+    transform-origin: bottom;
+}
+
+.segment:nth-child(2) {
+    animation: seg2 2s;
+    transform-origin: left;
+}
+
+.segment:nth-child(3) {
+    animation: seg3 2s;
+    right: 0;
+    transform-origin: top;
+}
+
+.segment:nth-child(4) {
+    animation: seg4 2s;
+    bottom: 0;
+    transform-origin: right;
+}
+
+@keyframes seg1 {
+    24.9% {
+        opacity: 0;
+    }
+    25% {
+        transform: scaleY(0);
+        opacity: 1;
+    }
+    37.5% {
+        transform: scaleY(1);
+    }
+    90% {
+        opacity: 1;
+    }
+}
+
+@keyframes seg2 {
+    37.4% {
+        opacity: 0;
+    }
+    37.5% {
+        transform: scaleX(0);
+        opacity: 1;
+    }
+    50% {
+        transform: scaleX(1);
+    }
+    90% {
+        opacity: 1;
+    }
+}
+
+@keyframes seg3 {
+    49.9% {
+        opacity: 0;
+    }
+    50% {
+        transform: scaleY(0);
+        opacity: 1;
+    }
+    62.5% {
+        transform: scaleY(1);
+    }
+    90% {
+        opacity: 1;
+    }
+}
+
+@keyframes seg4 {
+    62.4% {
+        opacity: 0;
+    }
+    62.5% {
+        transform: scaleX(0);
+        opacity: 1;
+    }
+    75% {
+        transform: scaleX(1);
+    }
+    90% {
+        opacity: 1;
+    }
+}
+
+.box {
+    width: 33px;
+    height: 33px;
+    background: white;
+    border-radius: 100% 0 0 0;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: calc(50% - 4px);
+    left: calc(50% - 4px);
+    animation: in 2.5s;
+}
+
+@keyframes in {
+    0% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0;
+    }
+    85% {
+        opacity 1;
+    }
+}
+
+.text {
+    font-family: 'Questrial', sans-serif;
+    font-size: 50pt;
+    position: absolute;
+    animation: textFade 3s;
+    color: white;
+}
+
+.text:nth-child(1) {
+    right: 35px;
+    bottom: -18px;
+}
+
+.text:nth-child(2) {
+    left: 40px;
+    bottom: -16px;
+}
+
+.text:nth-child(3) {
+    left: 82px;
+    bottom: -16px;
+}
+
+@keyframes textFade {
+    0% {
+        opacity 0;
+    }
+    90% {
+        opacity: 0
+    }
+}
+
+.animationContainer {
+    background: #212121;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    animation: containerFade 4.5s;
+    visibility: hidden;
+    z-index: 100;
+}
+
+@keyframes containerFade {
+    0% {
+        visibility: visible;
+        opacity: 1;
+    }
+    90% {
+        visibility: visible;
+        opacity: 1;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+
 nav {
     display: flex;
     padding: 25px 100px;
